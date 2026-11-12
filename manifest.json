@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "PDF 双语对照",
+  "version": "0.1.0",
+  "description": "点击图标，把当前 PDF 变成逐段中英对照。用自己的 LLM API。",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "PDF 双语对照（Alt+Shift+T）"
+  },
+  "commands": {
+    "translate-pdf": {
+      "suggested_key": {
+        "default": "Alt+Shift+T"
+      },
+      "description": "双语翻译当前 PDF"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}

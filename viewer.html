@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PDF 双语对照</title>
+    <link rel="stylesheet" href="viewer.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <div class="brand">双语</div>
+      <div class="doctitle" id="docTitle">PDF 双语对照</div>
+      <div class="status" id="status"></div>
+      <div class="actions">
+        <button class="btn" id="retryBtn" title="忽略缓存，重译本页">重译本页</button>
+        <button class="btn" id="modeBtn" title="切换双栏 / 单栏">单栏</button>
+        <button class="btn" id="optBtn" title="API 设置">设置</button>
+      </div>
+    </header>
+
+    <div class="banner hidden" id="banner"></div>
+
+    <main class="split" id="main">
+      <section class="pane left" id="left">
+        <div id="pages"></div>
+      </section>
+      <section class="pane right" id="right">
+        <div id="flow"></div>
+      </section>
+    </main>
+
+    <div class="overlay" id="overlay">
+      <div class="card">
+        <h2 id="ovTitle">正在载入 PDF…</h2>
+        <p id="ovDesc">从浏览器里点扩展图标可以翻译当前页面的 PDF；也可以把 PDF 文件拖进来。</p>
+        <input type="file" id="fileInput" accept="application/pdf" hidden />
+        <button class="btn primary" id="pickBtn">选择 PDF 文件</button>
+      </div>
+    </div>
+
+    <script type="module" src="viewer.js"></script>
+  </body>
+</html>

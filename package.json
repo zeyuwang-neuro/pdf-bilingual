@@ -1,0 +1,16 @@
+{
+  "name": "pdf-bilingual-ext",
+  "version": "0.1.0",
+  "description": "Edge/Chrome 扩展：PDF 中英逐段对照（零构建、零依赖，pdf.js 已 vendor）",
+  "scripts": {
+    "test": "node test/run.mjs",
+    "test:segment": "node test/segment.test.mjs",
+    "test:translate": "node test/translate.test.mjs",
+    "test:e2e": "node test/e2e.mjs"
+  },
+  "keywords": [],
+  "author": "zeyuwang-neuro",
+  "license": "MIT",
+  "type": "module",
+  "private": true
+}
